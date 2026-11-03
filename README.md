@@ -1,6 +1,6 @@
 # Masar
 
-Paste a job posting and your profile, and Masar tells you which skills you already have, which you're missing, and (soon) which HRDF-supported certifications close the gap.
+Paste a job posting and your profile, and Masar tells you which skills you already have, which you're missing, and (soon) which HRDF supported certifications close the gap.
 
 **Status:** work in progress. Week 1 of 4.
 
