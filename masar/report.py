@@ -1,4 +1,4 @@
-from masar.schemas import GapReport, JobRequirements
+from masar.schemas import CertPlan, GapReport, JobRequirements
 
 
 def check_evidence(job: JobRequirements, job_text: str) -> list[str]:
@@ -52,3 +52,28 @@ def show_report(job: JobRequirements, gap: GapReport) -> None:
     </div>"""
 
     display(HTML(page))
+
+
+HRDF_LABEL = {
+    True: "✅ HRDF supported",
+    False: "❌ Not HRDF supported",
+    None: "⚠️ HRDF support not verified yet",
+}
+
+
+def show_certifications(plan: CertPlan) -> None:
+    """Print the recommended certifications with their HRDF status from the knowledge base."""
+    from masar.knowledge_base import get_index
+
+    by_id = get_index().by_id
+    if not plan.recommendations:
+        print("No certification in the knowledge base covers these gaps.")
+    for r in plan.recommendations:
+        c = by_id[r.cert_id]
+        print(f"🎓 {c['name']} ({c['issuer']})")
+        print(f"   Covers: {', '.join(r.covers)}")
+        print(f"   Why: {r.reason}")
+        print(f"   {HRDF_LABEL[c['hrdf_supported']]}")
+        if c["source_url"]:
+            print(f"   Source: {c['source_url']}")
+        print()

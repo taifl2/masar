@@ -30,3 +30,13 @@ class SkillMatch(BaseModel):
 
 class GapReport(BaseModel):
     matches: List[SkillMatch]
+
+
+class Recommendation(BaseModel):
+    cert_id: str
+    covers: List[str] = Field(description="Missing skills from the list that this certification covers")
+    reason: str = Field(description="One sentence on why it fits this candidate")
+
+
+class CertPlan(BaseModel):
+    recommendations: List[Recommendation]
