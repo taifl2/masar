@@ -1,2 +1,4 @@
 langchain-openai
 pydantic
+sentence-transformers
+faiss-cpu
