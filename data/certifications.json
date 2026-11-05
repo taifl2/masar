@@ -1,0 +1,34 @@
+[
+  {
+    "id": "aws-ai-practitioner",
+    "name": "AWS Certified AI Practitioner",
+    "issuer": "Amazon Web Services",
+    "skills": ["AI and machine learning fundamentals", "generative AI", "AWS AI services", "responsible AI"],
+    "hrdf_supported": null,
+    "source_url": ""
+  },
+  {
+    "id": "nvidia-nca-genl",
+    "name": "NVIDIA-Certified Associate: Generative AI LLMs",
+    "issuer": "NVIDIA",
+    "skills": ["large language models", "prompt engineering", "LLM fine-tuning", "generative AI"],
+    "hrdf_supported": null,
+    "source_url": ""
+  },
+  {
+    "id": "google-pmle",
+    "name": "Google Cloud Professional Machine Learning Engineer",
+    "issuer": "Google Cloud",
+    "skills": ["machine learning models", "MLOps", "Vertex AI", "model deployment"],
+    "hrdf_supported": null,
+    "source_url": ""
+  },
+  {
+    "id": "pcap",
+    "name": "PCAP – Certified Associate in Python Programming",
+    "issuer": "Python Institute",
+    "skills": ["Python programming", "object-oriented programming", "Python modules and packages"],
+    "hrdf_supported": null,
+    "source_url": ""
+  }
+]
